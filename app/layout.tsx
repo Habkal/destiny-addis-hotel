@@ -13,15 +13,15 @@ const geistMono = Geist_Mono({
 });
 
 export const metadata: Metadata = {
-  title: "Holiday Hotel - Best Hotel in Addis Ababa, Ethiopia",
+  title: "Destiny Addis Hotel - Best Hotel in Addis Ababa, Ethiopia",
   description: "Luxury hotel in Addis Ababa, Ethiopia since 1986. Premium accommodation, restaurant, and dining experience with extensive menu featuring Ethiopian and international cuisine.",
-  keywords: "Holiday Hotel, Addis Ababa, Ethiopia, luxury hotel, restaurant, dining, Ethiopian cuisine, hotel accommodation, premium hospitality",
-  authors: [{ name: "Holiday Hotel" }],
+  keywords: "Destiny Addis Hotel, Addis Ababa, Ethiopia, luxury hotel, restaurant, dining, Ethiopian cuisine, hotel accommodation, premium hospitality",
+  authors: [{ name: "Destiny Addis Hotel" }],
   creator: "Habkal",
-  publisher: "Holiday Hotel",
+  publisher: "Destiny Addis Hotel",
   formatDetection: {
     email: false,
-    address: false,
+    address: false, 
     telephone: false,
   },
   metadataBase: new URL('https://destinyaddishotel.et'),
@@ -29,16 +29,16 @@ export const metadata: Metadata = {
     canonical: '/',
   },
   openGraph: {
-    title: "Holiday Hotel - Best Hotel in Addis Ababa, Ethiopia",
+    title: "Destiny Addis Hotel - Best Hotel in Addis Ababa, Ethiopia",
     description: "Luxury hotel in Addis Ababa, Ethiopia since 1986. Premium accommodation, restaurant, and dining experience.",
     url: 'https://destinyaddishotel.et',
-    siteName: 'Holiday Hotel',
+    siteName: 'Destiny Addis Hotel',
     images: [
       {
         url: '/Holiday-Cover.jpg',
         width: 1200,
         height: 630,
-        alt: 'Holiday Hotel Addis Ababa',
+        alt: 'Destiny Addis Hotel Addis Ababa',
       },
     ],
     locale: 'en_US',
@@ -46,7 +46,7 @@ export const metadata: Metadata = {
   },
   twitter: {
     card: 'summary_large_image',
-    title: 'Holiday Hotel - Best Hotel in Addis Ababa, Ethiopia',
+    title: 'Destiny Addis Hotel - Best Hotel in Addis Ababa, Ethiopia',
     description: 'Luxury hotel in Addis Ababa, Ethiopia since 1986. Premium accommodation, restaurant, and dining experience.',
     images: ['/Holiday-Cover.jpg'],
   },
