@@ -158,7 +158,7 @@ h1, h2, h3 {
 .hero {
     height: 100vh;
     background: linear-gradient(rgba(0,0,0,0.4), rgba(0,0,0,0.4)),
-                url('/HolidayNew-cover.jpg') center/cover no-repeat;
+                url('/HolidayNew-cover.JPG') center/cover no-repeat;
     
     z-index: 1;
     padding-top: 100px;
