@@ -34,46 +34,44 @@ export default function MenuSection({ onNavClick }: MenuSectionProps) {
     // Show loading state for menu data
     if (category !== 'food' && category !== 'alcoholic') {
       setIsLoading(true);
-      // Simulate loading delay for better UX
       await new Promise(resolve => setTimeout(resolve, 300));
       setIsLoading(false);
     }
     
     if (category === 'food') {
-      // Toggle food menu open/closed
       if (activeMenu === 'food') {
         setActiveMenu(null);
         setActiveFoodMenu(null);
       } else {
         setActiveMenu('food');
         setActiveFoodMenu(null);
-        setActiveAlcoholicMenu(null); // Clear alcoholic menu when switching to food
+        setActiveAlcoholicMenu(null);
       }
     } else if (category === 'alcoholic') {
-      // Toggle alcoholic menu open/closed
       if (activeMenu === 'alcoholic') {
         setActiveMenu(null);
         setActiveAlcoholicMenu(null);
       } else {
         setActiveMenu('alcoholic');
         setActiveAlcoholicMenu(null);
-        setActiveFoodMenu(null); // Clear food menu when switching to alcoholic
+        setActiveFoodMenu(null);
       }
     } else if (category === 'beef' || category === 'chicken' || category === 'pasta' || category === 'fish' || 
                category === 'indian' || category === 'ethiopian' || category === 'snacks' || category === 'pizza' ||
                category === 'soup' || category === 'salad' || category === 'breakfast' || category === 'dessert') {
-      // Toggle specific food category
       setActiveFoodMenu(activeFoodMenu === category ? null : category);
-      setActiveMenu('food'); // Ensure food menu stays open
-      setActiveAlcoholicMenu(null); // Clear alcoholic menu
+      setActiveMenu('food');
+      setActiveAlcoholicMenu(null);
     } else if (category === 'wine' || category === 'beer' || category === 'whisky' || category === 'vodka' ||
                category === 'gin' || category === 'liqueur') {
-      // Toggle specific alcoholic category
       setActiveAlcoholicMenu(activeAlcoholicMenu === category ? null : category);
-      setActiveMenu('alcoholic'); // Ensure alcoholic menu stays open
-      setActiveFoodMenu(null); // Clear food menu
+      setActiveMenu('alcoholic');
+      setActiveFoodMenu(null);
+    } else if (category === 'nonAlcoholic' || category === 'hot' || category === 'juice' || category === 'cake') {
+      setActiveMenu(activeMenu === category ? null : category);
+      setActiveFoodMenu(null);
+      setActiveAlcoholicMenu(null);
     } else {
-      // Handle other categories
       setActiveMenu(activeMenu === category ? null : category);
       setActiveFoodMenu(null);
       setActiveAlcoholicMenu(null);
@@ -133,14 +131,33 @@ export default function MenuSection({ onNavClick }: MenuSectionProps) {
   const renderMenuList = (category: string, menuData: any) => {
     if (!menuData[category]) return null;
     
+    // Check if this category should be visible
+    let isVisible = false;
+    
+    // For food categories
+    if (['beef', 'chicken', 'pasta', 'fish', 'indian', 'ethiopian', 'snacks', 'pizza', 'soup', 'salad', 'breakfast', 'dessert'].includes(category)) {
+      isVisible = activeFoodMenu === category;
+    }
+    // For alcoholic categories
+    else if (['wine', 'beer', 'whisky', 'vodka', 'gin', 'liqueur'].includes(category)) {
+      isVisible = activeAlcoholicMenu === category;
+    }
+    // For other categories
+    else {
+      isVisible = activeMenu === category;
+    }
+    
+    if (!isVisible) return null;
+    
     return (
-      <MenuList
-        category={category}
-        menuData={menuData}
-        activeFoodMenu={activeFoodMenu}
-        activeMenu={activeMenu}
-        renderMenuItem={renderMenuItem}
-      />
+      <div className="menu-list">
+        <h3>{menuData[category].title}</h3>
+        <div className="menu-items">
+          {menuData[category].items.map((item: MenuItem, index: number) => 
+            renderMenuItem(item, index, category)
+          )}
+        </div>
+      </div>
     );
   };
 
@@ -185,7 +202,7 @@ export default function MenuSection({ onNavClick }: MenuSectionProps) {
           </div>
           
           <button 
-            className={`menu-btn ${activeMenu === 'non-alcoholic' ? 'active' : ''}`}
+            className={`menu-btn ${activeMenu === 'nonAlcoholic' ? 'active' : ''}`}
             onClick={() => handleMenuClick('nonAlcoholic')}
           >
             <span className="btn-icon">🧃</span>
@@ -226,6 +243,7 @@ export default function MenuSection({ onNavClick }: MenuSectionProps) {
               </button>
             ))}
           </div>
+          
           <button 
             className={`menu-btn ${activeMenu === 'juice' ? 'active' : ''}`}
             onClick={() => handleMenuClick('juice')}
