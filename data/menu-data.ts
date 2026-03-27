@@ -126,7 +126,7 @@ export const menuData: MenuData = {
     title: "Pasta and Rice",
     items: [
       { 
-        name: "Meat sauce", 
+        name: "With meat sauce", 
         price: "ETB 650",
         description: "Classic Italian pasta with rich meat sauce made from ground beef, tomatoes, and herbs.",
         weight: "350g",
@@ -134,7 +134,7 @@ export const menuData: MenuData = {
         sides: "Parmesan cheese, garlic bread"
       },
       { 
-        name: "Tomato sauce", 
+        name: "With tomato sauce", 
         price: "ETB 580",
         description: "Fresh pasta with homemade tomato sauce, basil, and extra virgin olive oil.",
         weight: "300g",
@@ -142,7 +142,7 @@ export const menuData: MenuData = {
         sides: "Fresh basil, parmesan"
       },
       { 
-        name: "Carbonara sauce", 
+        name: "With carbonara sauce", 
         price: "ETB 620",
         description: "Authentic Italian carbonara with eggs, pecorino cheese, guanciale, and black pepper.",
         weight: "320g",
@@ -150,7 +150,7 @@ export const menuData: MenuData = {
         sides: "Pecorino cheese, black pepper"
       },
       { 
-        name: "Vegetable sauce", 
+        name: "With vegetable sauce", 
         price: "ETB 590",
         description: "Healthy pasta with seasonal vegetables in a light olive oil and garlic sauce.",
         weight: "300g",
@@ -158,7 +158,7 @@ export const menuData: MenuData = {
         sides: "Seasonal vegetables, herbs"
       },
       { 
-        name: "Chicken sauce", 
+        name: "With chicken sauce", 
         price: "ETB 650",
         description: "Tender chicken pieces in a creamy sauce with mushrooms and herbs over pasta.",
         weight: "350g",
@@ -318,7 +318,7 @@ export const menuData: MenuData = {
     title: "Pizzeria",
     items: [
       { 
-        name: "Holiday Special pizza", 
+        name: "Destiny Addis Special pizza", 
         price: "ETB 899",
         description: "Our signature pizza with premium toppings including beef, chicken, vegetables, and special herbs.",
         weight: "500g",
