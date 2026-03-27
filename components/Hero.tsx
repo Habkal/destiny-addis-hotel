@@ -13,7 +13,6 @@ export default function Hero({ onMenuClick }: HeroProps) {
         >
           Hotel Menu
         </button>
-        <p className="hero-tagline">Best Hotel in Addis Ababa, Ethiopia Since 1986</p>
       </div>
     </section>
   );
