@@ -726,9 +726,9 @@ color: white;
     box-shadow: 0 2px 8px rgba(212, 175, 55, 0.3);
 }
 
-/* QR Code Section - Desktop */
+/* QR Code Section - DESKTOP */
 .qr-code {
-    background: linear-gradient(135deg, #faf9ff 0%, #ffffff 100%);
+    background: white;
     padding: 1.5rem;
     border-radius: 16px;
     text-align: center;
@@ -753,6 +753,7 @@ color: white;
     flex-direction: column;
     align-items: center;
     gap: 0.8rem;
+    width: 100%;
 }
 
 .qr-image {
@@ -785,6 +786,7 @@ color: white;
     .section-title {
         font-size: 1.8rem;
         margin-bottom: 1.5rem;
+        text-align: center;
     }
     
     .payment-container {
@@ -798,6 +800,8 @@ color: white;
         flex-direction: column;
         gap: 1.5rem;
         padding: 1.2rem;
+        background: white;
+        border-radius: 16px;
     }
     
     /* Bank Info - Full width */
@@ -810,6 +814,7 @@ color: white;
         font-size: 1.3rem;
         text-align: center;
         margin-bottom: 1rem;
+        color: #d4af37;
     }
     
     .account-details {
@@ -823,6 +828,7 @@ color: white;
     .account-item label {
         font-size: 0.75rem;
         text-align: center;
+        display: block;
     }
     
     /* Hide account name on mobile */
@@ -830,7 +836,7 @@ color: white;
         display: none;
     }
     
-    /* COPY CONTAINER - CENTERED ON MOBILE */
+    /* COPY CONTAINER - CENTERED */
     .copy-container {
         display: flex;
         flex-direction: column;
@@ -864,38 +870,60 @@ color: white;
         margin: 0 auto;
     }
     
-    /* QR CODE SECTION - CONTAINED IN BOX */
+    /* QR CODE SECTION - COMPLETE BOX CONTAINING BOTH TITLE AND TEXT */
     .qr-code {
         order: 2;
         width: 100%;
-        margin: 0 auto;
+        margin: 0;
         padding: 1.2rem;
-        border: 2px solid #d4af37;
+        border: 3px solid #d4af37;
         border-radius: 16px;
         background: white;
         box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
     }
     
     .qr-code h3 {
-        font-size: 1rem;
-        margin-bottom: 0.8rem;
+        color: #d4af37;
+        font-size: 1.1rem;
+        font-weight: 700;
+        margin-bottom: 1rem;
         text-align: center;
+        width: 100%;
+        padding-bottom: 0.5rem;
+        border-bottom: 1px solid rgba(212, 175, 55, 0.3);
+    }
+    
+    .qr-placeholder {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        gap: 0.8rem;
+        width: 100%;
     }
     
     .qr-image {
         width: 120px;
         height: 120px;
+        border-radius: 12px;
+        border: 2px solid rgba(212, 175, 55, 0.3);
+        object-fit: cover;
+        background: white;
+        padding: 5px;
         margin: 0 auto;
     }
     
-    .qr-placeholder {
-        width: 100%;
-    }
-    
     .qr-placeholder p {
-        font-size: 0.85rem;
+        font-size: 0.9rem;
+        color: #d4af37;
         margin-top: 0.5rem;
-        padding: 0.3rem 1rem;
+        font-weight: 600;
+        background: rgba(212, 175, 55, 0.1);
+        padding: 0.4rem 1.2rem;
+        border-radius: 25px;
         display: inline-block;
         text-align: center;
     }
@@ -925,17 +953,19 @@ color: white;
         padding: 1rem;
     }
     
+    .qr-code h3 {
+        font-size: 0.95rem;
+        margin-bottom: 0.8rem;
+    }
+    
     .qr-image {
         width: 100px;
         height: 100px;
     }
     
-    .qr-code h3 {
-        font-size: 0.9rem;
-    }
-    
     .qr-placeholder p {
-        font-size: 0.75rem;
+        font-size: 0.8rem;
+        padding: 0.3rem 1rem;
     }
 }
 
