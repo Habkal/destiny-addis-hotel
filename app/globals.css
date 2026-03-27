@@ -597,7 +597,7 @@ color: white;
     }
 }
 
-/* Payment Section - Complete Fix */
+/* Payment Section */
 .payment-section {
     padding: 40px 0;
     background: linear-gradient(135deg, #e8e8e8 0%, #d8d8d8 100%);
@@ -709,16 +709,14 @@ color: white;
 .copy-btn:hover {
     transform: translateY(-2px);
     box-shadow: 0 4px 12px rgba(212, 175, 55, 0.3);
-    background: linear-gradient(135deg, #c4a32e, #e4d4b1);
 }
 
-/* QR Code Section - COMPLETE BOX */
+/* QR Code Section */
 .qr-code {
-    background: white;
+    background: #f8f9fa;
     padding: 1.5rem;
     border-radius: 16px;
-    border: 3px solid #d4af37;
-    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.08);
+    text-align: center;
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -730,18 +728,13 @@ color: white;
     font-size: 1.2rem;
     font-weight: 700;
     margin-bottom: 1rem;
-    text-align: center;
-    width: 100%;
-    padding-bottom: 0.8rem;
-    border-bottom: 2px solid rgba(212, 175, 55, 0.3);
 }
 
 .qr-placeholder {
     display: flex;
     flex-direction: column;
     align-items: center;
-    gap: 1rem;
-    width: 100%;
+    gap: 0.8rem;
 }
 
 .qr-image {
@@ -755,17 +748,13 @@ color: white;
 }
 
 .qr-placeholder p {
-    font-size: 1rem;
+    font-size: 0.9rem;
     color: #d4af37;
     font-weight: 600;
-    background: rgba(212, 175, 55, 0.1);
-    padding: 0.5rem 1.5rem;
-    border-radius: 30px;
-    display: inline-block;
-    margin: 0;
+    margin-top: 0.5rem;
 }
 
-/* ========== MOBILE RESPONSIVE - COMPLETE FIX ========== */
+/* ========== MOBILE RESPONSIVE ========== */
 @media (max-width: 768px) {
     .payment-section {
         padding: 30px 15px;
@@ -810,7 +799,7 @@ color: white;
         display: none;
     }
     
-    /* Account Number - Centered with Copy Button Below */
+    /* Account Number - CENTERED with Copy Button Below */
     .copy-container {
         display: flex;
         flex-direction: column;
@@ -826,6 +815,7 @@ color: white;
         text-align: center;
         width: 100%;
         font-weight: 600;
+        margin: 0;
     }
     
     .copy-btn {
@@ -836,21 +826,15 @@ color: white;
         font-size: 0.75rem;
     }
     
-    /* QR Code - COMPLETE BOX (contains title, image, and text) */
+    /* QR Code Section */
     .qr-code {
         width: 100%;
         padding: 1.2rem;
-        border: 3px solid #d4af37;
-        border-radius: 16px;
-        background: white;
-        margin: 0;
     }
     
     .qr-code h3 {
         font-size: 1rem;
         margin-bottom: 0.8rem;
-        padding-bottom: 0.6rem;
-        border-bottom: 2px solid rgba(212, 175, 55, 0.3);
     }
     
     .qr-image {
@@ -860,8 +844,6 @@ color: white;
     
     .qr-placeholder p {
         font-size: 0.85rem;
-        padding: 0.4rem 1.2rem;
-        margin-top: 0.5rem;
     }
 }
 
@@ -885,22 +867,17 @@ color: white;
         min-width: 70px;
     }
     
-    .qr-code {
-        padding: 1rem;
+    .qr-image {
+        width: 100px;
+        height: 100px;
     }
     
     .qr-code h3 {
         font-size: 0.9rem;
     }
     
-    .qr-image {
-        width: 100px;
-        height: 100px;
-    }
-    
     .qr-placeholder p {
         font-size: 0.75rem;
-        padding: 0.3rem 1rem;
     }
 }
 
