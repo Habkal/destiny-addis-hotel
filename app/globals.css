@@ -621,11 +621,6 @@ color: white;
     border-radius: 16px;
     padding: 1.5rem;
     box-shadow: 0 4px 20px rgba(0, 0, 0, 0.08);
-    transition: transform 0.3s ease, box-shadow 0.3s ease;
-}
-
-.bank-qr-row:hover {
-    box-shadow: 0 8px 30px rgba(0, 0, 0, 0.12);
 }
 
 /* Bank Info Section */
@@ -643,7 +638,7 @@ color: white;
 
 .bank-info h3 {
     font-size: 1.4rem;
-    margin-bottom: 1.2rem;
+    margin-bottom: 1rem;
     color: #d4af37;
     font-weight: 700;
 }
@@ -664,11 +659,9 @@ color: white;
     font-weight: 600;
     color: #d4af37;
     font-size: 0.85rem;
-    text-transform: uppercase;
-    letter-spacing: 0.5px;
 }
 
-/* Account Name Display */
+/* Account Name Display - Desktop */
 .account-name-display {
     background: #f8f9fa;
     padding: 0.8rem 1rem;
@@ -678,12 +671,6 @@ color: white;
     align-items: center;
     justify-content: space-between;
     gap: 0.5rem;
-    transition: all 0.3s ease;
-}
-
-.account-name-display:hover {
-    border-color: #d4af37;
-    background: #fff;
 }
 
 .account-name {
@@ -691,11 +678,10 @@ color: white;
     color: #333;
     word-break: break-all;
     font-family: 'Courier New', monospace;
-    font-weight: 500;
     flex: 1;
 }
 
-/* Copy Container - Fix for centering */
+/* Copy Container - Desktop */
 .copy-container {
     background: #f8f9fa;
     padding: 0.8rem 1rem;
@@ -703,15 +689,8 @@ color: white;
     border: 1px solid #e9ecef;
     display: flex;
     align-items: center;
-    justify-content: center;
+    justify-content: space-between;
     gap: 0.8rem;
-    transition: all 0.3s ease;
-    flex-wrap: wrap;
-}
-
-.copy-container:hover {
-    border-color: #d4af37;
-    background: #fff;
 }
 
 .account-number {
@@ -719,9 +698,7 @@ color: white;
     color: #333;
     word-break: break-all;
     font-family: 'Courier New', monospace;
-    font-weight: 500;
-    text-align: center;
-    letter-spacing: 0.5px;
+    flex: 1;
 }
 
 .copy-btn {
@@ -746,30 +723,22 @@ color: white;
 
 .copy-btn:hover {
     transform: translateY(-2px);
-    box-shadow: 0 4px 12px rgba(212, 175, 55, 0.3);
-    background: linear-gradient(135deg, #c4a32e, #e4d4b1);
+    box-shadow: 0 2px 8px rgba(212, 175, 55, 0.3);
 }
 
-/* QR Code Section - Fixed Box Layout */
+/* QR Code Section - Desktop */
 .qr-code {
-    background: linear-gradient(135deg, #f8f9fa 0%, #ffffff 100%);
+    background: linear-gradient(135deg, #faf9ff 0%, #ffffff 100%);
     padding: 1.5rem;
     border-radius: 16px;
     text-align: center;
-    border: 2px solid rgba(212, 175, 55, 0.3);
+    border: 2px solid #d4af37;
     height: auto;
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    transition: all 0.3s ease;
-    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.05);
-}
-
-.qr-code:hover {
-    border-color: #d4af37;
-    box-shadow: 0 4px 15px rgba(212, 175, 55, 0.15);
-    transform: translateY(-2px);
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.08);
 }
 
 .qr-code h3 {
@@ -777,8 +746,6 @@ color: white;
     margin-bottom: 1rem;
     font-size: 1.1rem;
     font-weight: 700;
-    text-transform: uppercase;
-    letter-spacing: 1px;
 }
 
 .qr-placeholder {
@@ -794,14 +761,8 @@ color: white;
     border-radius: 12px;
     border: 2px solid rgba(212, 175, 55, 0.3);
     object-fit: cover;
-    transition: transform 0.3s ease;
     background: white;
     padding: 5px;
-}
-
-.qr-image:hover {
-    transform: scale(1.05);
-    border-color: #d4af37;
 }
 
 .qr-placeholder p {
@@ -815,7 +776,7 @@ color: white;
     display: inline-block;
 }
 
-/* ========== MOBILE RESPONSIVE ========== */
+/* ========== MOBILE RESPONSIVE - FIXED ========== */
 @media (max-width: 768px) {
     .payment-section {
         padding: 30px 0;
@@ -824,7 +785,6 @@ color: white;
     .section-title {
         font-size: 1.8rem;
         margin-bottom: 1.5rem;
-        padding: 0 15px;
     }
     
     .payment-container {
@@ -838,14 +798,11 @@ color: white;
         flex-direction: column;
         gap: 1.5rem;
         padding: 1.2rem;
-        margin-bottom: 0;
-        border-radius: 14px;
     }
     
-    /* Bank Info - Full width on mobile */
+    /* Bank Info - Full width */
     .bank-info {
         width: 100%;
-        padding: 0;
         order: 1;
     }
     
@@ -868,12 +825,12 @@ color: white;
         text-align: center;
     }
     
-    /* Account Name - Hide on mobile to save space */
+    /* Hide account name on mobile */
     .account-name-item {
         display: none;
     }
     
-    /* Copy Container - Centered on mobile */
+    /* COPY CONTAINER - CENTERED ON MOBILE */
     .copy-container {
         display: flex;
         flex-direction: column;
@@ -882,26 +839,32 @@ color: white;
         text-align: center;
         padding: 1rem;
         gap: 0.8rem;
+        background: #f8f9fa;
+        border-radius: 10px;
+        border: 1px solid #e9ecef;
     }
     
     .account-number {
-        font-size: 0.9rem;
+        font-size: 1rem;
         text-align: center;
         width: 100%;
         word-break: break-all;
         letter-spacing: 0.5px;
         font-weight: 600;
+        margin: 0;
+        padding: 0;
     }
     
     .copy-btn {
         width: auto;
         min-width: 100px;
         justify-content: center;
-        padding: 0.5rem 1rem;
-        font-size: 0.8rem;
+        padding: 0.6rem 1.2rem;
+        font-size: 0.85rem;
+        margin: 0 auto;
     }
     
-    /* QR Code Section - Enhanced box on mobile */
+    /* QR CODE SECTION - CONTAINED IN BOX */
     .qr-code {
         order: 2;
         width: 100%;
@@ -916,30 +879,30 @@ color: white;
     .qr-code h3 {
         font-size: 1rem;
         margin-bottom: 0.8rem;
+        text-align: center;
     }
     
     .qr-image {
         width: 120px;
         height: 120px;
+        margin: 0 auto;
+    }
+    
+    .qr-placeholder {
+        width: 100%;
     }
     
     .qr-placeholder p {
-        font-size: 0.8rem;
+        font-size: 0.85rem;
         margin-top: 0.5rem;
-        padding: 0.2rem 0.8rem;
+        padding: 0.3rem 1rem;
+        display: inline-block;
+        text-align: center;
     }
 }
 
-/* Extra Small Devices (under 480px) */
+/* Extra Small Devices */
 @media (max-width: 480px) {
-    .payment-section {
-        padding: 20px 0;
-    }
-    
-    .section-title {
-        font-size: 1.5rem;
-    }
-    
     .bank-qr-row {
         padding: 1rem;
     }
@@ -949,18 +912,17 @@ color: white;
     }
     
     .account-number {
-        font-size: 0.8rem;
+        font-size: 0.85rem;
     }
     
     .copy-btn {
-        padding: 0.4rem 0.8rem;
-        font-size: 0.7rem;
+        padding: 0.5rem 1rem;
+        font-size: 0.75rem;
         min-width: 80px;
     }
     
     .qr-code {
         padding: 1rem;
-        border-width: 2px;
     }
     
     .qr-image {
@@ -973,33 +935,11 @@ color: white;
     }
     
     .qr-placeholder p {
-        font-size: 0.7rem;
+        font-size: 0.75rem;
     }
 }
 
-/* Tablet Screens (769px - 1024px) */
-@media (min-width: 769px) and (max-width: 1024px) {
-    .bank-qr-row {
-        gap: 1.5rem;
-        padding: 1.2rem;
-    }
-    
-    .qr-image {
-        width: 120px;
-        height: 120px;
-    }
-    
-    .account-name,
-    .account-number {
-        font-size: 0.85rem;
-    }
-    
-    .bank-info h3 {
-        font-size: 1.2rem;
-    }
-}
-
-/* Copy Feedback Animation */
+/* Copy Feedback */
 .copy-feedback {
     position: fixed;
     top: 50%;
@@ -1015,7 +955,6 @@ color: white;
     box-shadow: 0 4px 20px rgba(0, 0, 0, 0.2);
     white-space: nowrap;
     animation: fadeOutCopy 2s ease forwards;
-    font-family: 'Montserrat', sans-serif;
 }
 
 @keyframes fadeOutCopy {
